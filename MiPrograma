@@ -1,0 +1,33 @@
+package read;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class MiPrograma {
+
+	public static void main(String[] args) {
+		
+		JFrame la= new JFrame("Mi programa");
+		JPanel panel= new JPanel();
+		panel.setLayout(null);
+		JButton button1= new JButton("botón 1");
+		button1.setBounds(0, 0, 100,100);
+		JButton button2= new JButton("botón 2");
+		button2.setBounds(384, 0, 100, 100);
+		
+		panel.add(button1);
+		panel.add(button2);
+		
+		
+		
+		la.setSize(500,500);
+		la.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		la.setContentPane(panel);
+		la.setVisible(true);
+		
+
+		}
+	}
+
+
