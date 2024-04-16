@@ -1,0 +1,39 @@
+package read;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class MyWindow extends MiPrograma implements ActionListener {
+    
+    JButton okButton = new JButton("OK");
+    JPanel contentPane = new JPanel();
+
+    public MyWindow() {
+    	
+        
+        okButton.setBounds(100, 200, 80, 30);
+        contentPane.add(okButton);
+        okButton.addActionListener(this);
+        
+       
+          
+    }
+   
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	
+    	JButton clickedButton= (JButton) e.getSource();
+    	if(clickedButton.equals(okButton))
+    	
+    		openFile();
+    else
+    		return;
+    }
+    private void openFile() {
+    	System.out.println("Hola");
+    }
+}
